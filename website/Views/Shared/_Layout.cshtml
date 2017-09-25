@@ -1,4 +1,4 @@
-@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,31 +19,24 @@
     @Html.Raw(JavaScriptSnippet.FullScript)
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">website</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
-                </ul>
-            </div>
+    <div class="container-fluid" id="full">
+        <div id="site-title">
+            <h1>//greg_pritchard</h1>
+            <p>test</p>
         </div>
-    </nav>
-    <div class="container body-content">
+        <ul class="list-inline no-space">
+            <li><a asp-controller="Home" asp-action="Index" class="link">home</a></li>
+            <li><a asp-controller="Home" asp-action="Portfolio" class="link">résumé</a></li>
+            <li><a asp-controller="Auto" asp-action="Projects" asp-route-slug="" class="link">projects</a></li>
+            <li><a asp-controller="Home" asp-action="Contact" class="link">contact</a></li>
+            <li><a target="_blank" href="https://github.com/gregoryneal" class="link">github</a></li>
+        </ul>
+        <hr class="no-space" />        
+        <!-- The returned view -->
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - website</p>
+
+        <footer class="navbar-fixed-bottom text-right footer">
+            <p>&copy; 2017 - Greg Pritchard</p>
         </footer>
     </div>
 

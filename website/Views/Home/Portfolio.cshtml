@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "About";
+    ViewData["PDFFile"] = "/files/resume.pdf";
+}
+
+<div id="full">
+    <p>here you will find my latest resume, if your browser doesn't support pdf viewing, you can download it.</p>
+    <object id="infull" data="@ViewData["PDFFile"]" type="application/pdf" >
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="@ViewData["PDFFile"]">resume.pdf</a>.</p>
+    </object>
+</div>

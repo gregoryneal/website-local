@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Test_Post";
+}
+
+<h1>Project overview:</h1>
+<h3>@ViewBag.ProjectName</h3>
+<a class="link" href="https://github.com/gregoryneal/website-local">@ViewBag.ProjectName on github</a>
+<br />
+
+<h4 class="section">Overview</h4>
+<p>
+    This website was built to be my personal website, mainly as a place to store my portfolio and projects. At the time of writing the site is finished,
+    but not deployed, I have outlined my plan for deployment below. The website is split into the local and deployment environments:
+</p>
+
+<ul>
+    <li><p><b>local environment:</b> my local build environment is built on top of the <a href="https://docs.microsoft.com/en-us/aspnet/core/" target="_blank">ASP .Net Core</a> framework.</p></li>
+    <li><p><b>deployment environment:</b> my deployment process consists of recursively crawling my locally hosted development site with <a href="https://www.gnu.org/software/wget/manual/wget.html" target="_blank">wget</a>, saving the output html, css, js and any images. Then it's as simple as deploying on <a href="https://pages.github.com/" target="_blank">github pages</a> through my github account.</p></li>
+</ul>
+
+<h4 class="section">Difficulties</h4>
+<p>
+    One of the things that I knew that I needed before even picked the framework was that I needed to be able to easily add posts and projects without doing 
+    a lot of extra coding. Ideally I wanted to be able to add a new file to my "projects" folder and have it automatically routed to via 
+    "site.com/projects/&lt;project-name&gt;". I created a new controller to handle route requests two different ways, the top level: "site.com/projects"
+    is a page which is stored at "/Views/Projects/Projects.cshtml", it lists all of the other views in same folder, "/Views/Projects/", and generates links
+    for each of them.
+</p>
+<h4 class="section">Technologies</h4>
+<ul>
+    <li>ASP.NET core MVC framework</li>
+    <li>github</li>
+</ul>
+

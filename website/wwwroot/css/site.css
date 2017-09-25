@@ -1,37 +1,63 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    font-family: Consolas;
+    background-color: #1E1E1E;
+    color: #DCDCDC;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+html, body, #full {
+    height: 100%;
+    width: auto;
 }
 
-/* Set widths on the form inputs since otherwise they're 100% wide */
-input,
-select,
-textarea {
-    max-width: 280px;
+#full {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+#infull {
+    flex-grow: 1;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+#site-title {
+    display: inline-flex;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+.footer {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title-div {
+    display: inline;
+}
+
+.no-space {
+    padding: 0;
+    margin: 0;
+}
+
+/* Follow this directly after no-space */
+.space-top {
+    margin-top: 20px;
+}
+
+a {
+    background-color: transparent;
+    color: #4EC9B0;
+    text-decoration: none;
+}
+
+a:hover, a:active, a:visited {
+    color: #4EC9B0;
+}
+
+/* PDF Viewer object id */
+#plugin {
+    max-width: 500px !important;
+    height: auto !important;
+}
+
+.section {
+    color: #d7ba7d;
+    text-decoration: underline;
 }
